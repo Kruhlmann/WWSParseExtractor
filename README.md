@@ -33,3 +33,7 @@ Wrote file /tmp/sha_20070610-magtheridon_Deluvia.csv
 
 Process finished with exit code 0
 ```
+
+From the retrieved HTML table:
+
+![DPS table](doc/table.png)
