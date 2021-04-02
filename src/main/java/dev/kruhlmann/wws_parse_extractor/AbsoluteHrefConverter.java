@@ -28,7 +28,8 @@ public class AbsoluteHrefConverter {
     }
 
     private String convertLinkToAbsoluteIfRelative(String link) {
-        if (link.startsWith("http")) {
+        boolean linkIsAbsolute = link.startsWith("http");
+        if (linkIsAbsolute) {
             return link;
         } else {
             return this.host + link;
