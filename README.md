@@ -47,3 +47,17 @@ Process finished with exit code 0
 From the retrieved HTML table:
 
 ![DPS table](doc/table.png)
+
+Example output file:
+
+```csv
+SPELL_NAME;TOTAL_DMG;CRIT_PCT;MISS_PCT;RESIST_PCT;HIT_COUNT;HIT_AVG_DMG;HIT_MAX_DMG;DOT_TICKS_COUNT;AVG_DOT_TICK_DMG;MAX_DOT_TICK_DMG;CRIT_COUNT;CRIT_AVG_DMG;CRIT_MAX_DMG;
+Melee;0;0.25;0.0;0.0;434;360;1340;0;0;0;221;729;2452
+Melee (glancing);0;0.0;0.0;0.0;225;275;906;0;0;0;0;0;0
+Sinister Strike;0;0.21;0.0;0.0;123;671;1460;0;0;0;33;1574;2981
+Deadly Poison VII (Nature);0;0.0;0.0;0.0;0;0;0;179;207;567;0;0;0
+Rupture (Physical);0;0.0;0.0;0.0;0;0;0;128;276;565;0;0;0
+Shiv;0;0.22;0.0;0.0;25;339;398;0;0;0;7;810;1021
+Eviscerate;0;0.17;0.0;0.0;5;1413;2466;0;0;0;1;2400;2400
+Garrote (Physical);0;0.0;0.0;0.0;0;0;0;12;280;289;0;0;0
+```
