@@ -2,8 +2,10 @@
 
 ## Installing
 
+This script will run as root so please [inspect it](install) before running. 
+
 ```sh
-sudo curl https://raw.githubusercontent.com/Kruhlmann/WWSParseExtractor/master/install | sh
+curl https://raw.githubusercontent.com/Kruhlmann/WWSParseExtractor/master/install | sudo sh
 ```
 
 ## Running
