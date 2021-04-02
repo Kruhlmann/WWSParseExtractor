@@ -3,7 +3,7 @@
 set -x
 mkdir -p /var/lib/wpe/
 mkdir -p /usr/bin/
-curl -os /var/lib/wpe/wpe.jar https://github.com/Kruhlmann/WWSParseExtractor/releases/download/1.0/WWSParseExtractor.jar
+curl -Ls -o /var/lib/wpe/wpe.jar https://github.com/Kruhlmann/WWSParseExtractor/releases/download/1.0/WWSParseExtractor.jar
 cat > /usr/bin/wpe << EOF
 #!/usr/bin/env sh
 exec /usr/bin/java -jar '/var/lib/wpe/wpe.jar' "$@"
