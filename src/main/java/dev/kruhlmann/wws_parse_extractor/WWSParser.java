@@ -1,4 +1,4 @@
-package main.dev.kruhlmann.wws_parse_extractor;
+package main.java.dev.kruhlmann.wws_parse_extractor;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

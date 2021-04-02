@@ -1,4 +1,4 @@
-package main.dev.kruhlmann.wws_parse_extractor;
+package main.java.dev.kruhlmann.wws_parse_extractor;
 
 public class SpellReport {
     private String name;
