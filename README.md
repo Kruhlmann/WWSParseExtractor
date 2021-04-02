@@ -1,5 +1,13 @@
 # WWSParseExtractor
 
+## Installing
+
+```sh
+sudo curl https://raw.githubusercontent.com/Kruhlmann/WWSParseExtractor/master/install | sh
+```
+
+## Running
+
 Example exection:
 
 ```sh
