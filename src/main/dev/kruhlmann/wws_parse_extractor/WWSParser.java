@@ -55,29 +55,24 @@ public class WWSParser {
         }
     }
 
+    private SpellDamage getSpellDamageFromRowWithOffset(Element row, int index) {
+        int count = this.getCellIntValue(row, index);
+        int avg = this.getCellIntValue(row, index + 1);
+        int max = this.getCellIntValue(row, index + 2);
+        return new SpellDamage(count, avg, max);
+    }
+
     private SpellReport getSpellReportFromRow(Element row) {
         String name = this.getCellText(row, 1);
         int totalDamage = this.getCellIntValue(row, 2);
 
-        int normalHitsCount = this.getCellIntValue(row, 4);
-        int normalHitsAvg = this.getCellIntValue(row, 5);
-        int normalHitsMax = this.getCellIntValue(row, 6);
-
-        int damageOverTimeHitsCount = this.getCellIntValue(row, 7);
-        int damageOverTimeHitsAvg = this.getCellIntValue(row, 8);
-        int damageOverTimeHitsMax = this.getCellIntValue(row, 9);
-
-        int criticalHitsCount = this.getCellIntValue(row, 10);
-        int criticalHitsAvg = this.getCellIntValue(row, 11);
-        int criticalHitsMax = this.getCellIntValue(row, 12);
+        SpellDamage normalHits = this.getSpellDamageFromRowWithOffset(row, 4);
+        SpellDamage damageOverTimeHits = this.getSpellDamageFromRowWithOffset(row, 7);
+        SpellDamage criticalHits = this.getSpellDamageFromRowWithOffset(row, 10);
 
         double criticalHitPercentage  = this.getCellPercentageDoubleValue(row, 13);
         double missPercentage = this.getCellPercentageDoubleValue(row, 14);
         double resistPercentage = this.getCellPercentageDoubleValue(row, 15);
-
-        SpellDamage normalHits = new SpellDamage(normalHitsCount, normalHitsAvg, normalHitsMax);
-        SpellDamage damageOverTimeHits = new SpellDamage(damageOverTimeHitsCount, damageOverTimeHitsAvg, damageOverTimeHitsMax);
-        SpellDamage criticalHits = new SpellDamage(criticalHitsCount, criticalHitsAvg, criticalHitsMax);
 
         return new SpellReport(name, totalDamage, criticalHitPercentage, missPercentage, resistPercentage, normalHits, damageOverTimeHits, criticalHits);
     }
