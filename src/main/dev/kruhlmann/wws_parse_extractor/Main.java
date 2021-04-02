@@ -20,11 +20,11 @@ public class Main {
             CLIArgumentsCollection cliArgs = argumentParser.parseAsCLIArgumentsCollection();
             Main.startParserWithCLIArguments(cliArgs);
         } catch (InsufficientArgumentsException e) {
-            System.out.println("Insufficient arguments");
+            System.out.println("Insufficient arguments.");
             Main.printUsageString();
             System.exit(2);
         } catch (InvalidURLException e) {
-            System.out.println("Invalid URL");
+            System.out.println("Invalid URL.");
             System.exit(3);
         }
     }
@@ -36,7 +36,7 @@ public class Main {
             CSVParseFactory csvParseFactory = new CSVParseFactory(parses, cliArgs.getOutDir());
             csvParseFactory.generateCSVFiles();
         } catch (IOException e) {
-            System.out.println("Error occurred while saving CSV file");
+            System.out.println("Error occurred while saving CSV file.");
             System.exit(4);
         }
     }
