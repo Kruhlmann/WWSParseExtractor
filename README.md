@@ -2,7 +2,7 @@
 
 ## Installing
 
-⚠️ This script will run as root so please [inspect it](install) before running. 
+⚠️ This script will run as root so please [inspect it](install) before running. Alternatively, or if you're using Windows, you can download the JAR file directly from the [releases page](https://github.com/Kruhlmann/WWSParseExtractor/releases).
 
 ```sh
 curl https://raw.githubusercontent.com/Kruhlmann/WWSParseExtractor/master/install | sudo sh
