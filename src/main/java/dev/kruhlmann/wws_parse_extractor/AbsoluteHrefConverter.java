@@ -14,16 +14,31 @@ public class AbsoluteHrefConverter {
         List<String> absoluteLinks = new ArrayList<>();
 
         for (String link: links) {
-            if (this.host.endsWith("/") && link.startsWith("/")) {
-                link = link.replaceFirst("/", "");
-            }
-            if (link.startsWith("http")) {
-                absoluteLinks.add(link);
-            } else {
-                absoluteLinks.add(this.host + link);
-            }
+            String preformattedLink = this.preformatLink(link);
+            absoluteLinks.add(preformattedLink);
         }
 
         return absoluteLinks;
+    }
+
+    private String preformatLink(String link) {
+        String nonConflictingLink = this.removeSuffixPrefixSlashConflictFromLink(link);
+        String absoluteLink = this.convertLinkToAbsoluteIfRelative(nonConflictingLink);
+        return absoluteLink;
+    }
+
+    private String convertLinkToAbsoluteIfRelative(String link) {
+        if (link.startsWith("http")) {
+            return link;
+        } else {
+            return this.host + link;
+        }
+    }
+
+    private String removeSuffixPrefixSlashConflictFromLink(String link) {
+        if (this.host.endsWith("/") && link.startsWith("/")) {
+            return link.replaceFirst("/", "");
+        }
+        return link;
     }
 }
