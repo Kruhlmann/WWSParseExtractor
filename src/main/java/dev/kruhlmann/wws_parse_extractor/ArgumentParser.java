@@ -14,7 +14,7 @@ public class ArgumentParser {
         if (args.length < 2) {
             throw new InsufficientArgumentsException();
         }
-        if (args[0].split("/").length < 1) {
+        if (args[0].split("/").length < 2) {
             throw new InvalidURLException();
         }
     }
