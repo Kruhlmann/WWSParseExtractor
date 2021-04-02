@@ -1,4 +1,7 @@
-package main.java.dev.kruhlmann.wws_parse_extractor;
+package main.java.dev.kruhlmann.wws_parse_extractor.parse;
+
+import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellDamage;
+import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellReport;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

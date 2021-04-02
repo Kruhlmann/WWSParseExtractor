@@ -1,4 +1,4 @@
-package main.java.dev.kruhlmann.wws_parse_extractor;
+package main.java.dev.kruhlmann.wws_parse_extractor.cli;
 
 import main.java.dev.kruhlmann.wws_parse_extractor.exception.InsufficientArgumentsException;
 import main.java.dev.kruhlmann.wws_parse_extractor.exception.InvalidURLException;

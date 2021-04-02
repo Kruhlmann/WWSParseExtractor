@@ -1,7 +1,13 @@
 package main.java.dev.kruhlmann.wws_parse_extractor;
 
+import main.java.dev.kruhlmann.wws_parse_extractor.cli.ArgumentParser;
+import main.java.dev.kruhlmann.wws_parse_extractor.cli.CLIArgumentsCollection;
 import main.java.dev.kruhlmann.wws_parse_extractor.exception.InsufficientArgumentsException;
 import main.java.dev.kruhlmann.wws_parse_extractor.exception.InvalidURLException;
+import main.java.dev.kruhlmann.wws_parse_extractor.html.ParseLinkHTMLExtractor;
+import main.java.dev.kruhlmann.wws_parse_extractor.html.RemoteHTMLSourceReader;
+import main.java.dev.kruhlmann.wws_parse_extractor.parse.CSVParseFactory;
+import main.java.dev.kruhlmann.wws_parse_extractor.parse.Parse;
 
 import java.io.IOException;
 import java.util.ArrayList;

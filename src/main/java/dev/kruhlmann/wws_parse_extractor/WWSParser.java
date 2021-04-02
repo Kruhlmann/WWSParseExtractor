@@ -1,5 +1,9 @@
 package main.java.dev.kruhlmann.wws_parse_extractor;
 
+import main.java.dev.kruhlmann.wws_parse_extractor.parse.Parse;
+import main.java.dev.kruhlmann.wws_parse_extractor.parse.Player;
+import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellDamage;
+import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellReport;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

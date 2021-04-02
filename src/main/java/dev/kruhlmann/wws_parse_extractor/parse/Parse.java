@@ -1,8 +1,10 @@
-package main.java.dev.kruhlmann.wws_parse_extractor;
+package main.java.dev.kruhlmann.wws_parse_extractor.parse;
+
+import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellReport;
 
 import java.util.List;
 
-class Parse {
+public class Parse {
     private final String fightId;
     private final Player player;
     private final List<SpellReport> spellReports;
