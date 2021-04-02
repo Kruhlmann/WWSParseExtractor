@@ -13,7 +13,7 @@ curl https://raw.githubusercontent.com/Kruhlmann/WWSParseExtractor/master/instal
 Example exection:
 
 ```sh
-<binary> http://sisuguild.fi/~juha/wws/20070610-magtheridon/ /tmp/
+wpe http://sisuguild.fi/~juha/wws/20070610-magtheridon/ /tmp/
 ```
 
 Produces the following stdout:
