@@ -14,6 +14,9 @@ public class AbsoluteHrefConverter {
         List<String> absoluteLinks = new ArrayList<>();
 
         for (String link: links) {
+            if (this.host.endsWith("/") && link.startsWith("/")) {
+                link = link.replaceFirst("/", "");
+            }
             if (link.startsWith("http")) {
                 absoluteLinks.add(link);
             } else {
