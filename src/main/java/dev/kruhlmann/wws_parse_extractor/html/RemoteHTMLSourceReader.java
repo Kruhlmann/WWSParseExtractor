@@ -1,4 +1,4 @@
-package main.java.dev.kruhlmann.wws_parse_extractor.html;
+package dev.kruhlmann.wws_parse_extractor.html;
 
 import java.io.BufferedReader;
 import java.io.IOException;

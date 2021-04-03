@@ -1,6 +1,6 @@
-package test.java.dev.kruhlmann.wws_parse_extractor;
+package dev.kruhlmann.wws_parse_extractor;
 
-import main.java.dev.kruhlmann.wws_parse_extractor.AbsoluteHrefConverter;
+import dev.kruhlmann.wws_parse_extractor.AbsoluteHrefConverter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,4 @@
-package main.java.dev.kruhlmann.wws_parse_extractor.spell;
-
-import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellDamage;
+package dev.kruhlmann.wws_parse_extractor.spell;
 
 public class SpellReport {
     private String name;

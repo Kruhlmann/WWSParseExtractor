@@ -1,6 +1,6 @@
-package main.java.dev.kruhlmann.wws_parse_extractor.parse;
+package dev.kruhlmann.wws_parse_extractor.parse;
 
-import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellReport;
+import dev.kruhlmann.wws_parse_extractor.spell.SpellReport;
 
 import java.util.List;
 

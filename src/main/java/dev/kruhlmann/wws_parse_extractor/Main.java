@@ -1,14 +1,14 @@
-package main.java.dev.kruhlmann.wws_parse_extractor;
+package dev.kruhlmann.wws_parse_extractor;
 
-import main.java.dev.kruhlmann.wws_parse_extractor.cli.ArgumentParser;
-import main.java.dev.kruhlmann.wws_parse_extractor.cli.CLIArgumentsCollection;
-import main.java.dev.kruhlmann.wws_parse_extractor.exception.InsufficientArgumentsException;
-import main.java.dev.kruhlmann.wws_parse_extractor.exception.InvalidURLException;
-import main.java.dev.kruhlmann.wws_parse_extractor.html.ParseLinkHTMLExtractor;
-import main.java.dev.kruhlmann.wws_parse_extractor.html.RemoteHTMLSourceReader;
-import main.java.dev.kruhlmann.wws_parse_extractor.parse.CSVParseFactory;
-import main.java.dev.kruhlmann.wws_parse_extractor.parse.Parse;
-import main.java.dev.kruhlmann.wws_parse_extractor.parse.WWSParser;
+import dev.kruhlmann.wws_parse_extractor.cli.ArgumentParser;
+import dev.kruhlmann.wws_parse_extractor.cli.CLIArgumentsCollection;
+import dev.kruhlmann.wws_parse_extractor.exception.InsufficientArgumentsException;
+import dev.kruhlmann.wws_parse_extractor.exception.InvalidURLException;
+import dev.kruhlmann.wws_parse_extractor.html.ParseLinkHTMLExtractor;
+import dev.kruhlmann.wws_parse_extractor.html.RemoteHTMLSourceReader;
+import dev.kruhlmann.wws_parse_extractor.parse.CSVParseFileFactory;
+import dev.kruhlmann.wws_parse_extractor.parse.Parse;
+import dev.kruhlmann.wws_parse_extractor.parse.WWSParser;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,8 +40,8 @@ public class Main {
         RemoteHTMLSourceReader htmlLinkSourceReader = new RemoteHTMLSourceReader(cliArgs.getRootWWSURL());
         try {
             List<Parse> parses = Main.readAndParseLinksFromRemoteHTMLSourceReader(htmlLinkSourceReader, cliArgs);
-            CSVParseFactory csvParseFactory = new CSVParseFactory(parses, cliArgs.getOutDir());
-            csvParseFactory.generateCSVFiles();
+            CSVParseFileFactory csvParseFileFactory = new CSVParseFileFactory(parses, cliArgs.getOutDir());
+            csvParseFileFactory.generateCSVFiles();
         } catch (IOException e) {
             System.out.println("Error occurred while saving CSV file.");
             System.exit(4);

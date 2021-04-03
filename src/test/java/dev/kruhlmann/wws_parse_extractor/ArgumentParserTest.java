@@ -1,9 +1,9 @@
-package test.java.dev.kruhlmann.wws_parse_extractor;
+package dev.kruhlmann.wws_parse_extractor;
 
-import main.java.dev.kruhlmann.wws_parse_extractor.cli.ArgumentParser;
-import main.java.dev.kruhlmann.wws_parse_extractor.cli.CLIArgumentsCollection;
-import main.java.dev.kruhlmann.wws_parse_extractor.exception.InsufficientArgumentsException;
-import main.java.dev.kruhlmann.wws_parse_extractor.exception.InvalidURLException;
+import dev.kruhlmann.wws_parse_extractor.cli.ArgumentParser;
+import dev.kruhlmann.wws_parse_extractor.cli.CLIArgumentsCollection;
+import dev.kruhlmann.wws_parse_extractor.exception.InsufficientArgumentsException;
+import dev.kruhlmann.wws_parse_extractor.exception.InvalidURLException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

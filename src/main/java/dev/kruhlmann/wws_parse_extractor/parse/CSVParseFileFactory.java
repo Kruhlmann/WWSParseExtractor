@@ -1,20 +1,20 @@
-package main.java.dev.kruhlmann.wws_parse_extractor.parse;
+package dev.kruhlmann.wws_parse_extractor.parse;
 
-import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellDamage;
-import main.java.dev.kruhlmann.wws_parse_extractor.spell.SpellReport;
+import dev.kruhlmann.wws_parse_extractor.spell.SpellDamage;
+import dev.kruhlmann.wws_parse_extractor.spell.SpellReport;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-public class CSVParseFactory {
+public class CSVParseFileFactory {
     private final String CSV_HEADER = "SPELL_NAME;TOTAL_DMG;CRIT_PCT;MISS_PCT;RESIST_PCT;HIT_COUNT;HIT_AVG_DMG;HIT_MAX_DMG;DOT_TICKS_COUNT;AVG_DOT_TICK_DMG;MAX_DOT_TICK_DMG;CRIT_COUNT;CRIT_AVG_DMG;CRIT_MAX_DMG;\n";
     private final String template = "%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n";
     private final List<Parse> parses;
     private final String outDir;
 
-    public CSVParseFactory(List<Parse> parses, String outDir) {
+    public CSVParseFileFactory(List<Parse> parses, String outDir) {
         this.parses = parses;
         this.outDir = outDir;
     }
@@ -27,18 +27,23 @@ public class CSVParseFactory {
 
     private void generateCSVFileFromParse(Parse parse) throws IOException {
         String result = generateCSVParseResult(parse);
-        writeCSVResultToFile(parse, result);
+        writeCSVResultToFileIfNonEmpty(parse, result);
     }
 
-    private void writeCSVResultToFile(Parse parse, String result) throws IOException {
+    private void writeCSVResultToFileIfNonEmpty(Parse parse, String result) throws IOException {
         if (result == this.CSV_HEADER) {
             return;
         }
         String filePath = this.outDir + this.generateFileName(parse);
+        this.writeCSVResultToFile(filePath, result);
+    }
+
+    private void writeCSVResultToFile(String filePath, String result) throws IOException {
         FileOutputStream os = new FileOutputStream(filePath);
         os.write(result.getBytes(StandardCharsets.UTF_8));
         System.out.println("Wrote file " + filePath);
         os.close();
+
     }
 
     private String generateCSVParseResult(Parse parse) {

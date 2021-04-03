@@ -1,4 +1,4 @@
-package main.java.dev.kruhlmann.wws_parse_extractor.spell;
+package dev.kruhlmann.wws_parse_extractor.spell;
 
 public class SpellDamage {
     private final int count;

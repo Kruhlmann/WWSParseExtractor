@@ -1,4 +1,4 @@
-package main.java.dev.kruhlmann.wws_parse_extractor;
+package dev.kruhlmann.wws_parse_extractor;
 
 import java.util.ArrayList;
 import java.util.List;

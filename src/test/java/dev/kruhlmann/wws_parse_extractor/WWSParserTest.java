@@ -1,5 +1,7 @@
-package main.java.dev.kruhlmann.wws_parse_extractor.parse;
+package dev.kruhlmann.wws_parse_extractor;
 
+import dev.kruhlmann.wws_parse_extractor.parse.Parse;
+import dev.kruhlmann.wws_parse_extractor.parse.WWSParser;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -12,7 +14,7 @@ class WWSParserTest {
 
     @Test
     void shouldConstructParseFromHTMLSource() throws IOException {
-        String pageSource = Files.readString(Path.of("test/example_parse.html"));
+        String pageSource = Files.readString(Path.of("src/test/resources/example_parse.html"));
         WWSParser wwsParser = new WWSParser(pageSource);
         Parse parse = wwsParser.readParse("id");
 

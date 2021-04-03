@@ -1,7 +1,7 @@
-package main.java.dev.kruhlmann.wws_parse_extractor.cli;
+package dev.kruhlmann.wws_parse_extractor.cli;
 
-import main.java.dev.kruhlmann.wws_parse_extractor.exception.InsufficientArgumentsException;
-import main.java.dev.kruhlmann.wws_parse_extractor.exception.InvalidURLException;
+import dev.kruhlmann.wws_parse_extractor.exception.InsufficientArgumentsException;
+import dev.kruhlmann.wws_parse_extractor.exception.InvalidURLException;
 
 public class ArgumentParser {
     private String[] args;

@@ -1,4 +1,4 @@
-package main.java.dev.kruhlmann.wws_parse_extractor.parse;
+package dev.kruhlmann.wws_parse_extractor.parse;
 
 public class Player {
     private final String cls;
