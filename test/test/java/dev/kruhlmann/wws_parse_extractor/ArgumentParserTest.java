@@ -22,7 +22,7 @@ class ArgumentParserTest {
     }
 
     @Test
-    void parseAsCLIArgumentsCollectionInvalidURL() {
+    void shouldThrowErrorOnInvalidURL() {
         String[] args = new String[2];
         args[0] = "non_url";
         args[1] = "/directory/";
@@ -31,7 +31,7 @@ class ArgumentParserTest {
     }
 
     @Test
-    void parseAsCLIArgumentsCollectionInsufficientArguments() {
+    void ShouldThrowErrorOnInsufficientArguments() {
         String[] args = new String[1];
         ArgumentParser argumentParser = new ArgumentParser(args);
         assertThrows(InsufficientArgumentsException.class, () -> argumentParser.parseAsCLIArgumentsCollection());

@@ -19,7 +19,7 @@ class AbsoluteHrefConverterTest {
     }
 
     @Test
-    void relativeURLsToAbsolute() {
+    void shouldConvertRelativeURLsToAbsolute() {
         List<String> relativeLinks = Arrays.asList("/index.html", "https://example.org/index.html");
         List<String> absoluteLinks = absoluteHrefConverter.relativeURLsToAbsolute(relativeLinks);
         List<String> expectedLinks = Arrays.asList("https://example.org/index.html", "https://example.org/index.html");

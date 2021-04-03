@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class WWSParserTest {
 
     @Test
-    void readParse() throws IOException {
+    void shouldConstructParseFromHTMLSource() throws IOException {
         String pageSource = Files.readString(Path.of("test/example_parse.html"));
         WWSParser wwsParser = new WWSParser(pageSource);
         Parse parse = wwsParser.readParse("id");
