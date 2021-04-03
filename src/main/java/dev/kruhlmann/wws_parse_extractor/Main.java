@@ -8,6 +8,7 @@ import main.java.dev.kruhlmann.wws_parse_extractor.html.ParseLinkHTMLExtractor;
 import main.java.dev.kruhlmann.wws_parse_extractor.html.RemoteHTMLSourceReader;
 import main.java.dev.kruhlmann.wws_parse_extractor.parse.CSVParseFactory;
 import main.java.dev.kruhlmann.wws_parse_extractor.parse.Parse;
+import main.java.dev.kruhlmann.wws_parse_extractor.parse.WWSParser;
 
 import java.io.IOException;
 import java.util.ArrayList;

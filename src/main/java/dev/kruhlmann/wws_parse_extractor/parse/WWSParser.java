@@ -1,4 +1,4 @@
-package main.java.dev.kruhlmann.wws_parse_extractor;
+package main.java.dev.kruhlmann.wws_parse_extractor.parse;
 
 import main.java.dev.kruhlmann.wws_parse_extractor.parse.Parse;
 import main.java.dev.kruhlmann.wws_parse_extractor.parse.Player;
